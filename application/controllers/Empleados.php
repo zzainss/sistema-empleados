@@ -8,7 +8,6 @@ class Empleados extends CI_Controller {
 		  $this->load->model('db_model');
 			$this->load->library(array('session','form_validation'));
 			$this->load->helper(array('url','form'));
-      $this->load->library('pagination');
 	    if($this->session->userdata('is_logued_in') == false){
 				redirect(base_url().'login');
 			}
@@ -20,6 +19,12 @@ class Empleados extends CI_Controller {
         $this->db->order_by("id","desc");
         $this->db->limit(10);
       $data['consulta'] = $this->db->get('staff');
+      $this->load->view('container',$data);
+		}
+    public function add(){
+      $data['titulo'] = 'Login';
+      $data['page'] = 'add_empleados_view';
+
       $this->load->view('container',$data);
 		}
 }

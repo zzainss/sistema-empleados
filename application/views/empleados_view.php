@@ -1,7 +1,7 @@
 <div class="row">
       <div class="col s11"><span class="flow-text">Listado de Empleados</span></div>
       <div class="col s1"><span class="flow-text">
-        <a class="btn-floating btn-small waves-effect waves-light red"><i class="material-icons">add</i></a>
+        <a class="btn-floating btn-small waves-effect waves-light red" href="<?=base_url('/empleados/add') ?>"><i class="material-icons">add</i></a>
       </span></div>
     </div>
 
